@@ -27,6 +27,7 @@ class AlepeSpider(scrapy.Spider):
 				yield next_request
 
 	def parse_par(self, response):
+		pass
 		
 #		par_name = next_request.meta['par_name']
 #       year     = next_request.meta['year']
