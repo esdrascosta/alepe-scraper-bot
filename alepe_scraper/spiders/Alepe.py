@@ -6,6 +6,13 @@ class AlepeSpider(scrapy.Spider):
     name = 'alepe'
     allowed_domains = ['www.alepe.pe.gov.br']
     start_urls = ['http://www.alepe.pe.gov.br/transparencia-vi/']
+	
+    def __init__(self, yearFrom="2015", yearTo="2017", monthFrom="1", monthTo="12", *args, **kwargs):
+        super(AlepeSpider, self).__init__(*args, **kwargs)
+        self.yearFrom = int(yearFrom)
+        self.yearTo = int(yearTo) + 1
+        self.monthFrom = int(monthFrom)
+        self.monthTo = int(monthTo) + 1
 
     def parse(self, response):
 
@@ -15,9 +22,8 @@ class AlepeSpider(scrapy.Spider):
             par_code = par.css("::attr(value)").extract_first()
             par_name = par.css("::text").extract_first()
 
-            # TODO year and month must be dynamic
-            for year in [2017]:
-                for month in range(1, 13):
+            for year in range(self.yearFrom, self.yearTo):
+                for month in range(self.monthFrom, self.monthTo):
                     url = "?dep=%s&ano=%s&mes=%s" % (str(par_code), year, month)
                     next_url = response.urljoin(url)
                     next_request = scrapy.Request(url=next_url, callback=self.parse_par, encoding='utf8')

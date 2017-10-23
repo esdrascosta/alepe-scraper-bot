@@ -47,7 +47,7 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'alepe_scraper.middlewares.AlepeDataSpiderMiddleware': 543,
+#    'alepe_scraper.middlewares.AlepeSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'alepe_scraper.pipelines.AlepeDataPipeline': 300,
+#    'alepe_scraper.pipelines.AlepePipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
