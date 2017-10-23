@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for alepe_data project
+# Scrapy settings for alepe_scraper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,14 +9,14 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'alepe_data'
+BOT_NAME = 'alepe_scraper'
 
-SPIDER_MODULES = ['alepe_data.spiders']
-NEWSPIDER_MODULE = 'alepe_data.spiders'
+SPIDER_MODULES = ['alepe_scraper.spiders']
+NEWSPIDER_MODULE = 'alepe_scraper.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'alepe_data (+http://www.yourdomain.com)'
+#USER_AGENT = 'alepe_scraper (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -47,13 +47,13 @@ ROBOTSTXT_OBEY = True
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'alepe_data.middlewares.AlepeDataSpiderMiddleware': 543,
+#    'alepe_scraper.middlewares.AlepeDataSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'alepe_data.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'alepe_scraper.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'alepe_data.pipelines.AlepeDataPipeline': 300,
+#    'alepe_scraper.pipelines.AlepeDataPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
